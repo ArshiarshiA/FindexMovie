@@ -25,6 +25,7 @@ export default function TypeSelector({ type, setType }: ITypeSelector) {
                     onChange={changeHandler}
                     className='text-white border border-[#353535] h-11'
                 >
+                    <MenuItem value={''}>None</MenuItem>
                     <MenuItem value={'movie'}>Movie</MenuItem>
                     <MenuItem value={'series'}>Series</MenuItem>
                 </Select>
