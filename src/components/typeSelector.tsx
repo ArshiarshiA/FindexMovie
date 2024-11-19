@@ -14,8 +14,8 @@ export default function TypeSelector({ type, setType }: ITypeSelector) {
     }
 
     return (
-        <Box sx={{ minWidth: 80 }}>
-            <FormControl fullWidth>
+        <Box>
+            <FormControl fullWidth className='text-white'>
                 <InputLabel className='text-white' id="demo-select-small-label">Type</InputLabel>
                 <Select
                     labelId="demo-select-small-label"
@@ -23,11 +23,12 @@ export default function TypeSelector({ type, setType }: ITypeSelector) {
                     value={type}
                     label="Type"
                     onChange={changeHandler}
-                    className='text-white border border-[#353535] h-11'
+                    className='text-white border border-[#6b6b6b]'
                 >
                     <MenuItem value={''}>None</MenuItem>
                     <MenuItem value={'movie'}>Movie</MenuItem>
                     <MenuItem value={'series'}>Series</MenuItem>
+                    <MenuItem value={'game'}>Game</MenuItem>
                 </Select>
             </FormControl>
         </Box>

@@ -9,9 +9,9 @@ module.exports = {
     remotePatterns: [
       {
         protocol: 'https',
-        hostname: 'assets.example.com',
+        hostname: 'm.media-amazon.com',
         port: '',
-        pathname: '/account123/**',
+        pathname: '/images/M/**'
       },
     ],
   },

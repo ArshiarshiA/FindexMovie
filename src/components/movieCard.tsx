@@ -65,7 +65,7 @@ export default function MovieCard({ Poster = DEFAULT_IMG, Title, Runtime, Year, 
                                     }} size={30} />
                                 ) : (
                                     <CiBookmark className="cursor-pointer" onClick={() => {
-                                        setMovieList([...MovieList, { Title, Image: Poster, Runtime, Type, Year, imdbID }])
+                                        setMovieList([...MovieList, { Title, Poster, Runtime, Type, Year, imdbID }])
                                         toast.success('Movie Added To Your List', {
                                             position: 'bottom-left',
                                             autoClose: 6000,

@@ -12,7 +12,7 @@ import SavedMovie from "@/components/savedMovie";
 import TypeSelector from "@/components/typeSelector";
 
 interface IMovieListItems {
-  Image?: string
+  Poster: string
   Title?: string
   Runtime?: string
   Year?: string
@@ -71,9 +71,9 @@ export default function Home() {
     }
   }, [movieList])
 
-  const changeHandler = (e: ChangeEvent<HTMLInputElement>) => {
-    setInput(e.target.value)
-  }
+  const changeHandler = (e: ChangeEvent<HTMLInputElement>) => setInput(e.target.value)
+
+  console.log(movieList[0])
 
   return (
     <>

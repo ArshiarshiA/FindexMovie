@@ -1,5 +1,6 @@
 import React from "react"
 import axios from "axios"
+import Image from "next/image"
 import { toast } from "react-toastify"
 import { IoBookmark } from "react-icons/io5"
 import { MdOutlineMovie } from "react-icons/md"
@@ -8,7 +9,7 @@ import { TMovieList } from "@/app/page"
 
 interface ISavedMovie {
     ImdbId?: string
-    Image?: string
+    Poster: string
     Title?: string
     Year?: string
     Type?: string
@@ -20,14 +21,16 @@ interface ISavedMovie {
     setCheck: React.Dispatch<React.SetStateAction<boolean>>
 }
 
-export default function SavedMovie({ ImdbId, Image, Title, Year, Type, movieList, setIsLoading, setMovie, isLoading, check, setCheck }: ISavedMovie) {
+export default function SavedMovie({ ImdbId, Poster, Title, Year, Type, movieList, setIsLoading, setMovie, isLoading, check, setCheck }: ISavedMovie) {
     return (
         <div
             key={ImdbId}
             className="flex border-b py-3"
         >
             <div className="w-fit">
-                <img className="h-[250px] object-cover" src={Image} alt="" />
+                {
+                    <Image src={Poster} className="h-[250px] object-cover" height={250} width={160} alt="" />
+                }
             </div>
             <div className="pl-5 flex flex-col justify-between w-7/12">
                 <div>
