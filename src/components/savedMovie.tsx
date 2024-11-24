@@ -1,6 +1,5 @@
 import React from "react"
 import axios from "axios"
-import Image from "next/image"
 import { toast } from "react-toastify"
 import { IoBookmark } from "react-icons/io5"
 import { MdOutlineMovie } from "react-icons/md"
@@ -29,7 +28,7 @@ export default function SavedMovie({ ImdbId, Poster, Title, Year, Type, movieLis
         >
             <div className="w-fit">
                 {
-                    <Image src={Poster} className="h-[250px] object-cover" height={250} width={160} alt="" />
+                    <img src={Poster} className="h-[250px] object-cover" height={250} width={160} alt="" />
                 }
             </div>
             <div className="pl-5 flex flex-col justify-between w-7/12">

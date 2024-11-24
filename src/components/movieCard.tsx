@@ -1,14 +1,14 @@
-import { IoTimeOutline } from "react-icons/io5";
-import { SiRottentomatoes } from "react-icons/si";
-import { SiMetacritic } from "react-icons/si";
-import RatingBlock from "./ratingBlock";
-import { TfiWorld } from "react-icons/tfi";
-import { CiBookmark } from "react-icons/ci";
-import { IoBookmark } from "react-icons/io5";
 import { TMovieList } from "@/app/page";
 import React, { SetStateAction } from "react";
 import { toast } from "react-toastify";
 import 'react-toastify/dist/ReactToastify.css';
+import RatingBlock from "./ratingBlock";
+import { IoTimeOutline } from "react-icons/io5";
+import { SiRottentomatoes } from "react-icons/si";
+import { SiMetacritic } from "react-icons/si";
+import { TfiWorld } from "react-icons/tfi";
+import { CiBookmark } from "react-icons/ci";
+import { IoBookmark } from "react-icons/io5";
 
 const DEFAULT_IMG = 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTPcCjIVG3qv2QeXJ8vMgsoItp4-EzaL1oRb350awDfo0JgZuRASQXUSd2_p7yIGBv98b8&usqp=CAU'
 

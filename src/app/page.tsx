@@ -69,11 +69,9 @@ export default function Home() {
       window.localStorage.setItem('movieList', JSON.stringify(movieList))
     }
   }, [movieList])
-
+  
   const changeHandler = (e: ChangeEvent<HTMLInputElement>) => setInput(e.target.value)
-
-  console.log(movieList[0])
-
+  
   return (
     <>
       <section className="pt-40">

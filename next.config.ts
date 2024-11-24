@@ -2,19 +2,16 @@ import type { NextConfig } from "next";
 
 const nextConfig: NextConfig = {
   /* config options here */
-};
-
-module.exports = {
   images: {
     remotePatterns: [
       {
-        protocol: 'https',
-        hostname: 'm.media-amazon.com',
+        pathname: '**',
+        hostname: '**',
         port: '',
-        pathname: '/images/M/**'
-      },
-    ],
-  },
-}
+        protocol: 'https'
+      }
+    ]
+  }
+};
 
 export default nextConfig;
