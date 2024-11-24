@@ -40,7 +40,7 @@ export default function SavedMovie({ ImdbId, Poster, Title, Year, Type, movieLis
                 </div>
                 <div className="flex">
                     <button
-                        className="bg-yellow-400 text-black px-4"
+                        className="bg-yellow-400 border border-black text-black px-4 transition-all duration-300 delay-100 hover:bg-black hover:border hover:border-yellow-400 hover:text-white"
                         onClick={() => {
                             axios.get(`https://www.omdbapi.com/?apikey=ce48eb55&t=${Title}&type=${Type}`)
                                 .then(response => {
@@ -56,7 +56,7 @@ export default function SavedMovie({ ImdbId, Poster, Title, Year, Type, movieLis
                         if (typeof window !== undefined) {
                             window.localStorage.setItem('movieList', JSON.stringify(movieList))
                         }
-                        toast.info('Movie Removed From Your List', {
+                        toast.info(`${Title} Removed From Your List`, {
                             position: 'bottom-left',
                             autoClose: 6000,
                             theme: 'dark'

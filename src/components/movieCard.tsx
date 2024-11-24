@@ -56,7 +56,7 @@ export default function MovieCard({ Poster = DEFAULT_IMG, Title, Runtime, Year, 
                                         if (typeof window !== undefined) {
                                             window.localStorage.setItem('movieList', JSON.stringify(MovieList))
                                         }
-                                        toast.info('Movie Removed From Your List', {
+                                        toast.info(`${Title} Removed From Your List`, {
                                             position: 'bottom-left',
                                             autoClose: 5000,
                                             theme: 'dark'
@@ -66,7 +66,7 @@ export default function MovieCard({ Poster = DEFAULT_IMG, Title, Runtime, Year, 
                                 ) : (
                                     <CiBookmark className="cursor-pointer" onClick={() => {
                                         setMovieList([...MovieList, { Title, Poster, Runtime, Type, Year, imdbID }])
-                                        toast.success('Movie Added To Your List', {
+                                        toast.success(`${Title} Added To Your List`, {
                                             position: 'bottom-left',
                                             autoClose: 6000,
                                             theme: 'dark'

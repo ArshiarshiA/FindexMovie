@@ -57,13 +57,12 @@ export default function Home() {
       axios.get(`https://www.omdbapi.com/?apikey=ce48eb55&s=${input}&type=${type}`)
         .then(response => response.data)
         .then(data => {
-          setIsLoading(true)
           setFilteredM(data)
         })
     } else {
       setIsLoading(false)
     }
-  }, [input , type])
+  }, [input, type])
 
   useEffect(() => {
     if (typeof window !== undefined) {
@@ -173,10 +172,14 @@ export default function Home() {
                   </div>
                   <div>
                     <button
-                      className="bg-yellow-400 text-black px-4"
+                      className="bg-yellow-400 px-4 text-black border border-black transition-all duration-300 delay-100 hover:bg-black hover:border hover:border-yellow-400 hover:text-white"
                       onClick={() => {
                         axios.get(`https://www.omdbapi.com/?apikey=ce48eb55&t=${movie.Title}&type=${movie.Type}`)
                           .then(response => setMovie(response.data))
+                          .then(data => {
+                            setIsLoading(true)
+                            scrollTo({ top: 640, behavior: 'smooth' })
+                          })
                       }}
                     >
                       Detail
@@ -202,7 +205,7 @@ export default function Home() {
             />
           )
         ) : (
-          <h1>LOADING...</h1>
+          <h1>Waiting For Your Searching...</h1>
         )}
       </main>
 
